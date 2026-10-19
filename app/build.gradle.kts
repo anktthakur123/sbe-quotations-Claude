@@ -4,10 +4,10 @@ plugins {
     id("com.google.devtools.ksp")
 }
 
-// Release workflows pass these properties from the Git tag (for example v1.0.2).
+// Release workflows pass these properties from the Git tag (for example v1.0.3).
 // The defaults keep Android Studio builds reproducible before the first GitHub release.
-val appVersionNameValue = providers.gradleProperty("appVersionName").orElse("1.0.2").get()
-val appVersionCodeValue = providers.gradleProperty("appVersionCode").orElse("1000002").get().toInt()
+val appVersionNameValue = providers.gradleProperty("appVersionName").orElse("1.0.3").get()
+val appVersionCodeValue = providers.gradleProperty("appVersionCode").orElse("1000003").get().toInt()
 val releaseKeystorePath = System.getenv("SBE_KEYSTORE_FILE")
 val releaseSigningEnabled = !releaseKeystorePath.isNullOrBlank()
 

@@ -28,7 +28,7 @@ QuoteMaker is an offline-first quotation app for **SIDH BABA ENTERPRISES**. Cust
 3. Transfer/open it on an Android 11+ phone and approve the installation when prompted.
 4. If Android requests it, enable **Allow from this source / Install unknown apps** for the browser or file manager that opens the APK.
 
-A push to `main` builds a **debug APK artifact** under GitHub Actions (useful for build checks, not for OTA updates). Pushing a version tag such as `v1.0.2` builds a **signed release APK** and publishes it under GitHub Releases. For normal phone testing and future in-app OTA updates, install the signed APK from **Releases**.
+A push to `main` builds a **debug APK artifact** under GitHub Actions (useful for build checks, not for OTA updates). Pushing a version tag such as `v1.0.3` builds a **signed release APK** and publishes it under GitHub Releases. For normal phone testing and future in-app OTA updates, install the signed APK from **Releases**.
 
 > If you already installed a debug build from Android Studio, export a JSON backup first. Debug APKs have a different signing key from the release APK; uninstalling the debug build may be required before installing the first signed release and will erase that app installation's local data.
 
@@ -84,8 +84,8 @@ Paste the clipboard content into the `SBE_KEYSTORE_BASE64` secret. Add the other
 After the source has been pushed to `main` and the four secrets have been added, run these commands from the repository folder in Git Bash:
 
 ```bash
-git tag v1.0.2
-git push origin v1.0.2
+git tag v1.0.3
+git push origin v1.0.3
 ```
 
 Then open the **[Actions page](https://github.com/anktthakur123/sbe-quotations-Claude/actions)** and wait for the tagged build to turn green. The workflow publishes `QuoteMaker.apk` on the **[Releases page](https://github.com/anktthakur123/sbe-quotations-Claude/releases)**.
@@ -98,11 +98,11 @@ Commit and push code changes to `main`, then use a new version tag that has neve
 git add .
 git commit -m "Describe the QuoteMaker change"
 git push origin main
-git tag v1.0.3
-git push origin v1.0.3
+git tag v1.0.4
+git push origin v1.0.4
 ```
 
-Use the next version for each subsequent release (for example `v1.0.4`, `v1.0.5`). The workflow derives the version name/code from the tag, signs the APK with the same key, and uploads it to GitHub Releases. On the installed app, the updater can then detect it at launch or through **Check for Update**.
+Use the next version for each subsequent release (for example `v1.0.5`, `v1.0.6`). The workflow derives the version name/code from the tag, signs the APK with the same key, and uploads it to GitHub Releases. On the installed app, the updater can then detect it at launch or through **Check for Update**.
 
 ## Permissions and data
 
