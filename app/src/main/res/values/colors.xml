@@ -1,0 +1,9 @@
+<resources>
+    <color name="navy">#1F3864</color>
+    <color name="navy_dark">#15284A</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="bg">#F4F6FA</color>
+    <color name="card">#FFFFFF</color>
+    <color name="text_muted">#5A6474</color>
+</resources>

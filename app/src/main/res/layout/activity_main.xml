@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/bg">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:background="@color/navy" android:padding="16dp" android:gravity="center_vertical">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="SIDH BABA ENTERPRISES" android:textColor="@color/white" android:textSize="18sp" android:textStyle="bold"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Quotation Generator · Offline-first · PDF export" android:textColor="#C7D2E4" android:textSize="12sp" android:layout_marginTop="2dp"/>
+        </LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCheckUpdateTop" style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Check Updates" android:textColor="@color/white" android:textSize="11sp"/>
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout" android:layout_width="match_parent" android:layout_height="wrap_content"
+        app:tabMode="fixed" app:tabGravity="fill"
+        app:tabTextColor="@color/text_muted" app:tabSelectedTextColor="@color/navy"
+        app:tabIndicatorColor="@color/navy" android:background="@color/white" android:elevation="2dp"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager" android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/bg">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:padding="16dp">
+
+    <!-- Quotation Details -->
+    <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp" app:cardElevation="2dp" android:layout_marginBottom="14dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Quotation Details" android:textStyle="bold" android:textSize="16sp" android:textColor="@color/navy"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnNewQuotation" style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content" android:layout_height="36dp" android:minWidth="0dp"
+                    android:insetTop="0dp" android:insetBottom="0dp" android:textSize="12sp"
+                    android:text="+ New Quotation" android:strokeColor="@color/navy" android:textColor="@color/navy"/>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Quotation Number" android:layout_marginBottom="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etQuoteNo" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="none" android:focusable="false" android:background="@android:color/transparent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Quotation Date" android:layout_marginBottom="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etQuoteDate" android:layout_width="match_parent" android:layout_height="wrap_content" android:focusable="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Valid Until (90 days)" android:layout_marginBottom="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etValidUntil" android:layout_width="match_parent" android:layout_height="wrap_content" android:focusable="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Specific Gauge Name (for Subject line)">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etSubject" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Customer Details -->
+    <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp" app:cardElevation="2dp" android:layout_marginBottom="14dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="10dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Customer Details" android:textStyle="bold" android:textSize="16sp" android:textColor="@color/navy"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnClearCustomer" style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content" android:layout_height="36dp" android:text="Clear" android:textColor="@color/navy"/>
+            </LinearLayout>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Load from Customer Master" android:textSize="12sp" android:textColor="@color/text_muted" android:layout_marginBottom="2dp"/>
+            <Spinner android:id="@+id/spinnerCustomer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Customer Name (optional)" android:layout_marginBottom="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCustName" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Customer Company Name" android:layout_marginBottom="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCustCompany" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Customer Address" android:layout_marginBottom="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCustAddress" android:layout_width="match_parent" android:layout_height="wrap_content" android:minLines="2" android:gravity="top"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Customer GSTIN" android:layout_marginBottom="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCustGstin" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaveCustomer" style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent" android:layout_height="46dp"
+                android:text="Save to Customer Master" android:strokeColor="@color/navy" android:textColor="@color/navy" android:layout_marginBottom="4dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Customer name can be left blank." android:textSize="11sp" android:textColor="@color/text_muted"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Paste items -->
+    <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp" app:cardElevation="2dp" android:layout_marginBottom="14dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Paste Item Details" android:textStyle="bold" android:textSize="16sp" android:textColor="@color/navy" android:layout_marginBottom="8dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPaste" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Paste one item per line. Either column order is supported." android:minLines="4" android:gravity="top" android:inputType="textMultiLine"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnParse" android:layout_width="0dp" android:layout_height="46dp" android:layout_weight="1"
+                    android:text="Parse &amp; Add Items" android:backgroundTint="@color/navy" android:layout_marginEnd="8dp" android:textSize="12sp"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnClearPaste" style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp" android:layout_height="46dp" android:layout_weight="1"
+                    android:text="Clear Paste Box" android:strokeColor="@color/navy" android:textColor="@color/navy" android:textSize="12sp"/>
+            </LinearLayout>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Detects an item code whether it appears before or after the description. You can still correct each field below." android:textSize="11sp" android:textColor="@color/text_muted" android:layout_marginTop="6dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Items -->
+    <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp" app:cardElevation="2dp" android:layout_marginBottom="14dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Items" android:textStyle="bold" android:textSize="16sp" android:textColor="@color/navy"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAddItem" style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content" android:layout_height="36dp" android:text="+ Add" android:textColor="@color/navy"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerItems" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+            <TextView android:id="@+id/tvNoItems" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="No items yet. Paste items above or tap + Add." android:textSize="12sp" android:textColor="@color/text_muted" android:gravity="center" android:padding="12dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Owner (fixed) -->
+    <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp" app:cardElevation="2dp" android:layout_marginBottom="14dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Owner Details (fixed)" android:textStyle="bold" android:textSize="14sp" android:textColor="@color/navy" android:layout_marginBottom="6dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12sp" android:lineSpacingExtra="2dp"
+                android:text="SIDH BABA ENTERPRISES\nDC-97/126, Gali No. 97, New Sabzi Mandi, Dabua Colony,\nN.I.T Faridabad - 121001 (Haryana)\nPhone: 9818772664 · Email: sidhbaba111@gmail.com\nGSTIN: 06CRNPK7443K1Z9" android:layout_marginBottom="10dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Terms &amp; Conditions (fixed)" android:textStyle="bold" android:textSize="14sp" android:textColor="@color/navy" android:layout_marginBottom="6dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12sp" android:lineSpacingExtra="2dp"
+                android:text="1. Delivery: Within 30 days from the date of receipt of the confirmed purchase order.\n2. Taxes: Applicable taxes shall be charged as per the prevailing rates at the time of dispatch.\n3. Payment Terms: 50% advance payment along with the order confirmation and the remaining 50% upon delivery."/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSavePdf" android:layout_width="match_parent" android:layout_height="52dp"
+        android:text="Save PDF" android:backgroundTint="@color/navy" android:layout_marginBottom="10dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGenerateShare" style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent" android:layout_height="52dp"
+        android:text="Generate &amp; Share PDF" android:strokeColor="@color/navy" android:textColor="@color/navy" android:layout_marginBottom="12dp"/>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Saved PDFs use the quotation number as the filename in /Quotations Form. History stores only editable quotation data, not duplicate PDF files. Editing a saved quotation keeps the same quotation number." android:textSize="11sp" android:textColor="@color/text_muted" android:gravity="center" android:layout_marginBottom="24dp"/>
+
+</LinearLayout>
+</ScrollView>

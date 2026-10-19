@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/bg">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:padding="16dp">
+
+    <!-- Quotation Numbering -->
+    <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp" app:cardElevation="2dp" android:layout_marginBottom="16dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Quotation Numbering" android:textStyle="bold" android:textSize="16sp" android:textColor="@color/navy" android:layout_marginBottom="12dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Prefix" android:layout_marginBottom="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPrefix" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Next Serial Number" android:layout_marginBottom="6dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNextSerial" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Next new quotation will be numbered using this prefix + number. Editing a saved quotation does not change its number." android:textSize="12sp" android:textColor="@color/text_muted" android:layout_marginBottom="12dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaveNumbering" android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="Save Numbering" android:backgroundTint="@color/navy"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- GitHub OTA -->
+    <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp" app:cardElevation="2dp" android:layout_marginBottom="16dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="GitHub OTA Updates" android:textStyle="bold" android:textSize="16sp" android:textColor="@color/navy" android:layout_marginBottom="10dp"/>
+
+            <TextView android:id="@+id/tvGithubRepo" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textSize="13sp" android:layout_marginBottom="4dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="This repository is fixed in the app and cannot be changed here." android:textSize="11sp" android:textColor="@color/text_muted" android:layout_marginBottom="12dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCheckUpdate" android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="Check for Updates" android:backgroundTint="@color/navy" android:layout_marginBottom="10dp"/>
+
+            <TextView android:id="@+id/tvAppInfo" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textSize="12sp" android:textColor="@color/text_muted" android:layout_marginBottom="4dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="When a release is found, Android downloads the APK and asks you to approve installation. Android does not allow silent APK updates." android:textSize="11sp" android:textColor="@color/text_muted"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Data & Storage -->
+    <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp" app:cardElevation="2dp" android:layout_marginBottom="16dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Data &amp; Storage" android:textStyle="bold" android:textSize="16sp" android:textColor="@color/navy" android:layout_marginBottom="10dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFolderAccess" style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="Enable Quotation Folder Access" android:strokeColor="@color/navy" android:textColor="@color/navy" android:layout_marginBottom="10dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnExportBackup" style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="Export Data Backup (JSON)" android:strokeColor="@color/navy" android:textColor="@color/navy" android:layout_marginBottom="10dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnImportBackup" style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="Import Data Backup" android:strokeColor="@color/navy" android:textColor="@color/navy" android:layout_marginBottom="10dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnExportCustomers" style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="Export Customers Only" android:strokeColor="@color/navy" android:textColor="@color/navy" android:layout_marginBottom="10dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnImportCustomers" style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="Import Customers Only" android:strokeColor="@color/navy" android:textColor="@color/navy" android:layout_marginBottom="6dp"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Customer master and history stay on this device. Back up the JSON file periodically before changing phones or clearing app data." android:textSize="11sp" android:textColor="@color/text_muted"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Owner details -->
+    <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp" app:cardElevation="2dp" android:layout_marginBottom="24dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Owner Details" android:textStyle="bold" android:textSize="16sp" android:textColor="@color/navy" android:layout_marginBottom="8dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="13sp" android:lineSpacingExtra="2dp"
+                android:text="SIDH BABA ENTERPRISES\nDC-97/126, Gali No. 97, New Sabzi Mandi, Dabua Colony,\nN.I.T Faridabad - 121001 (Haryana)\nPhone: 9818772664\nEmail: sidhbaba111@gmail.com\nGSTIN: 06CRNPK7443K1Z9"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+</ScrollView>

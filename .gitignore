@@ -1,0 +1,18 @@
+# Gradle/Android generated files
+.gradle/
+**/build/
+local.properties
+.DS_Store
+Thumbs.db
+
+# Signing keys and credentials: NEVER COMMIT THESE
+*.keystore
+*.jks
+*.p12
+*.pfx
+key.properties
+signing.properties
+
+# IDE files (keep Gradle wrapper and source files)
+.idea/
+*.iml
